@@ -14,7 +14,7 @@ module.exports = merge.smart(commonConfig, {
 
   devServer: {
     host: 'localhost',
-    port: 9000,
+    port: 8000,
     historyApiFallback: true,
     hot: true,
     contentBase: path.join(__dirname, 'public'),

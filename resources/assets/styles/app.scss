@@ -1,5 +1,24 @@
 * {
-	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "“Segoe UI”", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "“Helvetica Neue”", sans-serif;
+}
+
+
+@mixin padding($top: 0px, $left: 0px, $bottom: 0px, $right: 0px) {
+	& {
+		padding: $top $left $bottom $right;
+	}
+}
+
+@mixin vertical-align($align: middle, $height: 100px) {
+	&:before {
+		content: "";
+		display: inline-block;
+		height: $height;
+		vertical-align: $align;
+	}
+	& > div {
+		vertical-align: $align;
+	}
 }
 
 input[type='text'], input[type='email'], input[type='password'], textarea {
@@ -10,4 +29,5 @@ input[type='text'], input[type='email'], input[type='password'], textarea {
 
 @tailwind utilities;
 
-@import 'utilities/animations'
+@import 'utilities/animations';
+@import "layout";

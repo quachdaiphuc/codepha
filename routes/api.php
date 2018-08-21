@@ -15,17 +15,15 @@ Route::group(['middleware' => ['auth:api']], function() {
   Route::delete('/avatars', '\App\Api\Controllers\AvatarsController@delete');
 });
 
-/**
- * Password reset endpoints
- */
-Route::post('/forgot-password', '\App\Api\Controllers\PasswordResetController@forgotPassword');
-Route::post('/reset-password', '\App\Api\Controllers\PasswordResetController@resetPassword');
+//Route::get('login', 'AuthController@index');
+//Route::get('github', 'AuthController@redirectToProvider')->name('login');
+//Route::get('github/callback', 'AuthController@handleProviderCallback');
 
-/**
- * These endpoints return JWT's, so make sure to wrap them in the encrypt cookies
- * middleware.
- */
-Route::group(['middleware' => ['encryptCookies']], function() {
-  Route::post('/login', '\App\Api\Controllers\SessionController@login');
-  Route::post('/signup', '\App\Api\Controllers\UserController@signup');
-});
+//Route::group([
+//    'prefix' => 'admin',
+//    'namespace' => 'Api\Auth',
+//], function () {
+//    Route::get('login', 'AuthController@index');
+//    Route::get('github', 'AuthController@redirectToProvider')->name('login');
+//    Route::get('github/callback', 'AuthController@handleProviderCallback');
+//});

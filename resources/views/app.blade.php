@@ -11,15 +11,16 @@
 
       <title>{{ config('app.name', 'Laravel') }}</title>
 
-      <!-- Styles -->
-      <link href="/css/app.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
   </head>
 </head>
-<body class="bg-grey-lightest">
+<body>
   <div id="app">
 
   </div>
-  <script charset="utf8" src="/js/vendor.js"></script>
   <script charset="utf8" src="/js/app.js"></script>
 </body>
 </html>

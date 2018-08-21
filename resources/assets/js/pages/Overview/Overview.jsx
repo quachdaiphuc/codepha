@@ -1,11 +1,14 @@
 import React from 'react'
+import {Header} from '../includes/Header'
+import {Content} from '../includes/Content'
+import {Sidebar} from '../includes/Sidebar'
 
-const OverviewComponent = (props) => {
-  return (
-    <div>
-      Put your initial dashboard page here
+const OverviewComponent = (props) => (
+    <div className='wrapper'>
+        <Sidebar/>
+        <Header/>
+        <Content/>
     </div>
-  )
-}
+)
 
 export const Overview = OverviewComponent
