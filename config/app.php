@@ -164,6 +164,7 @@ return [
         App\Providers\RepositoryServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
     ],
 

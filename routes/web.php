@@ -1,5 +1,5 @@
 <?php
-//auth()->login(\App\Models\User::find(2));
+auth()->login(\App\Models\User::find(2));
 $spa = function() {
   return view('app');
 };
@@ -9,15 +9,26 @@ $spa = function() {
  */
 Route::get('/{view?}', $spa)->where('view','<>', '(admin)')->name('catchall');
 
+#Logout
+Route::get('logout', 'Api\Auth\AuthController@logout');
+
 Route::group([
     'prefix' => 'admin',
     'middleware' => 'admin',
+    'namespace' => 'Admin',
 ], function () {
-    Route::get('logout', 'Api\Auth\AuthController@logout');
 
-    Route::get('/', function () {
-        return 1;
-    });
+    #Home
+    Route::get('/', 'ReposController@index')->name('repos.index');
+
+    # Default repos page
+    Route::get('repos', 'ReposController@index')->name('repos.index');
+    Route::post('repos/sync-repos', 'ReposController@fetchUpdate')->name('sync.repos');
+    Route::post('repos/create-hook', 'ReposController@createHook');
+});
+
+Route::group(['prefix' => 'github', 'namespace' => 'Admin', 'middleware' => 'github-webhook'], function () {
+    Route::post('/hook', 'GithubPayloadController@handlePayload');
 });
 
 Route::group([

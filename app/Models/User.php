@@ -48,4 +48,14 @@ class User extends Authenticatable
     protected $dates = ['deleted_at', 'last_repo_update_at'];
 
     protected $casts = ['is_active' => 'boolean'];
+
+    public function getAccountType()
+    {
+        switch ($this->service_type) {
+            case 1:
+                return 'github';
+            default:
+                return 'github';
+        }
+    }
 }

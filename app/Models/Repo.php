@@ -97,71 +97,8 @@ class Repo extends BaseModel
 
     protected $casts = ['private' => 'boolean', 'is_active' => 'boolean'];
 
-    public function getProjectTypeAttribute($value)
-    {
-        return strtoupper($value);
-    }
-
-    public function setProjectTypeAttribute($value)
-    {
-        return strtoupper($value);
-    }
-
-    public function registries()
-    {
-        return $this->hasMany(Registry::class, 'repo_id', 'id');
-    }
-
-    public function userRepos()
-    {
-        return $this->hasMany(UserRepo::class, 'repo_id', 'id');
-    }
-
-    public function users()
-    {
-        return $this->belongsToMany(User::class, 'user_repos');
-    }
-
-    public function setting()
-    {
-        return $this->hasMany(RepoSetting::class, 'repo_id', 'id');
-    }
-
-    public function environments()
-    {
-        return $this->hasMany(RepoEnvironmentVariable::class, 'repo_id', 'id');
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     */
     public function key()
     {
         return $this->hasOne(Key::class, 'repo_id', 'id');
-    }
-
-    public function builds()
-    {
-        return $this->hasMany(Build::class, 'repo_id', 'id');
-    }
-
-    public function recentBuilds(int $limit = 3)
-    {
-        return $this->builds()->latest()->nPerGroup('repo_id', $limit);
-    }
-
-    public function configuration()
-    {
-        return $this->hasOne(Configuration::class, 'repo_id', 'id');
-    }
-
-    public function members()
-    {
-        return $this->belongsToMany(User::class, 'user_repos')->wherePivot('writeable_permission', 0);
-    }
-
-    public function secrets()
-    {
-        return $this->hasMany(Secret::class, 'repo_id', 'id');
     }
 }
