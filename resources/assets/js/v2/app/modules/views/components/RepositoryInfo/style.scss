@@ -1,0 +1,91 @@
+.RepositoryInfo {
+    .repo-name {
+        font-weight: bold;
+        color: #666A95;
+        font-size: 20px;
+        h3 {
+            display: flex;
+            align-items: flex-end;
+            span {
+                margin-left: 13px;
+                width: 300px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    .repo-preview {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        p {
+            margin-right: 10px;
+        }
+        .service {
+            img {
+                display: block;
+            }
+        }
+        .repo-status {
+            span {
+                color: #FFFFFF;
+                font-weight: bold;
+                font-size: 12px;
+                background-color: #666A95;
+                padding: 7px 10px;
+            }
+            .name {
+                border-radius: 3px 0 0 3px;
+            }
+            .status {
+                display: inline-block;
+                margin-left: -4px;
+                border-radius: 0px 3px 3px 0;
+                text-transform: uppercase
+            }
+            .success {
+                background-color: #25C58C;
+            }
+            .error {
+                background-color: #FF2F2F;
+            }
+            .killed {
+                background-color: #FF33ED;
+            }
+            .skipped {
+                background-color: #9A9A9A;
+            }
+            .timeout {
+                background-color: #666666;
+            }
+            .running {
+                background-color: #FFBA0F;
+            }
+            .pending {
+                background-color: #FFBA0F;
+            }
+        }
+        .icon-text {
+            padding: 7px 10px 5px 5px;
+            border-radius: 3px;
+            background-color: rgba(0, 0, 0, 0.05);
+            color: #666A95;
+            display: flex;
+            align-items: center;
+            img {
+                display: inline-block;
+                width: 17px;
+                height: auto;
+                margin-right: 10px;
+            }
+            span {
+                font-size: 14px;
+            }
+            .lead {
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

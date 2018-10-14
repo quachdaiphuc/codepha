@@ -1,0 +1,144 @@
+.RepositoryRecentBuild {
+    display: flex;
+    .status {
+        width: 80px;
+        height: 70px;
+        border-radius: 5px 0 0 5px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        padding-top: 10px;
+        .build-no {
+            font-size: 16px;
+            margin: 10px 0 3px;
+        }
+        .build-time {
+            font-size: 13px;
+        }
+    }
+    .status-success {
+        background-color: #25C58C;
+    }
+    .status-error {
+        background-color: #FF6565;
+    }
+    .status-killed {
+        background-color: #FF33ED;
+    }
+    .status-skipped {
+        background-color: #9A9A9A;
+    }
+    .status-timeout {
+        background-color: #666666;
+    }
+    .status-running {
+        background-color: #FFBA0F;
+    }
+    .status-pending {
+        background-color: #FF8104;
+    }
+    .old {
+        display: none;
+        margin-left: 10px;
+        border-radius: 3px;
+        background-color: rgba(0, 0, 0, 0.03);
+        box-shadow: 0 0 5px 0 rgba(8, 8, 8, 0.1);
+        p:last-child {
+            color: #666A95;
+        }
+    }
+    .error {
+        i {
+            color: #FF6565;
+        }
+        p:nth-child(2) {
+            color: #ED4C4C;
+        }
+    }
+    .success {
+        i {
+            color: #25C58C;
+        }
+        p:nth-child(2) {
+            color: #25C58C;
+        }
+    }
+    .killed {
+        i {
+            color: #FF33ED;
+        }
+        p:nth-child(2) {
+            color: #FF33ED;
+        }
+    }
+    .skipped {
+        i {
+            color: #9A9A9A;
+        }
+        p:nth-child(2) {
+            color: #9A9A9A;
+        }
+    }
+    .timeout {
+        i {
+            color: #666666;
+        }
+        p:nth-child(2) {
+            color: #666666;
+        }
+    }
+    .running {
+        i {
+            color: #FFBA0F;
+        }
+        p:nth-child(2) {
+            color: #FFBA0F;
+        }
+    }
+    .pending {
+        i {
+            color: #FF8104;
+        }
+        p:nth-child(2) {
+            color: #FF8104;
+        }
+    }
+    .last-build {
+        display: flex;
+        box-shadow: 0 0 5px 0 rgba(8, 8, 8, 0.1);
+        .commit-info {
+            padding: 45px 10px 0 15px;
+            background-color: #F7F7F7;
+            .highlight {
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 16px;
+                margin-bottom: 5px;
+                color: #427EFF;
+                a {
+                    color: #427EFF;
+                    text-decoration: underline;
+                }
+                span {
+                    display: block;
+                    font-weight: 500;
+                    font-size: 13px;
+                    color: #666A95;
+                    text-decoration: none;
+                }
+            }
+            .no-under {
+                text-decoration: none;
+                width: 125px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    @media only screen and (min-width: 1440px) {
+        .old {
+            display: block;
+        }
+    }
+}

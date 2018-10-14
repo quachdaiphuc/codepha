@@ -14,6 +14,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="/css/v2/app.css">
 
   </head>
 </head>
@@ -21,6 +22,6 @@
   <div id="app">
 
   </div>
-  <script charset="utf8" src="/js/app.js"></script>
+  <script charset="utf8" src="/js/v2/index.js"></script>
 </body>
 </html>

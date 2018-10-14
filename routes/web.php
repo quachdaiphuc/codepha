@@ -1,5 +1,5 @@
 <?php
-auth()->login(\App\Models\User::find(2));
+//auth()->login(\App\Models\User::find(2));
 $spa = function() {
   return view('app');
 };

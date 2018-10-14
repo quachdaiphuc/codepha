@@ -1,0 +1,47 @@
+.Overview {
+    .overview-header {
+        .list-header {
+            border-bottom: 1px solid #ccc;
+        }
+        ul {
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            li {
+                grid-column: 1 span;
+                line-height: 50px;
+                font-size: 13px;
+                color: #666A95;
+                text-align: center;
+            }
+        }
+        p {
+            text-align: center;
+            margin: 28px 0;
+            color: #666A95;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+    .overview-content {
+        margin-top: 60px;
+        border: 1px solid #E1E2E8;
+        border-radius: 5px;
+        .chart-box {
+            h3 {
+                color: #666A95;
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 50px;
+                padding-left: 20px;
+                border-bottom: 1px solid #E1E2E8;
+            }
+            p {
+                text-align: center;
+                padding: 20px 0;
+                font-weight: bold;
+                color: #666A95;
+            }
+        }
+    }
+}

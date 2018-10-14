@@ -1,0 +1,99 @@
+.Header {
+    height: 60px;
+    background-color: #FCFCFC;
+    box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 3px 7px 0 rgba(110, 142, 247, 0.13);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+        margin-left: 12px;
+    }
+    .account {
+        display: flex;
+        align-items: center;
+        .i18n {
+            margin-right: 60px;
+            li {
+                display: inline-block;
+                color: #666A95;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: bold;
+                font-size: 13px;
+                line-height: 18px;
+                height: 32px;
+                width: 32px;
+                text-align: center;
+                cursor: pointer;
+                p {
+                    padding-top: 7px;
+                }
+            }
+            li:nth-child(2) {
+                margin: 0 17px;
+            }
+            .active {
+                border-radius: 9px;
+                background-color: #427EFF;
+                color: white;
+            }
+        }
+        .user {
+            display: flex;
+            align-items: center;
+            .username {
+                color: #666A95;
+                font-size: 14px;
+                font-weight: bold;
+                margin-right: 15px;
+            }
+            .avatar {
+                width: 32px;
+                height: 32px;
+                margin-right: 8px;
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 100%;
+                }
+            }
+            .dropdown {
+                margin-right: 22px;
+                img {
+                    vertical-align: middle;
+                    margin-top: -3px;
+                    cursor: pointer;
+                }
+                .backgr {
+                    background-color: transparent;
+                    width: 100vw;
+                    height: 100vh;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 9;
+                }
+                .option {
+                    z-index: 99;
+                    height: 60px;
+                    width: 193px;
+                    border: 1px solid #E1E2E8;
+                    border-radius: 0 0 5px 5px;
+                    background-color: #FFFFFF;
+                    box-shadow: 0 3px 15px 0 rgba(110, 142, 247, 0.33);
+                    position: absolute;
+                    top: 60px;
+                    right: 22px;
+                    display: flex;
+                    align-items: center;
+                    color: #666A95;
+                    font-size: 13px;
+                    cursor: pointer;
+                    img {
+                        vertical-align: middle;
+                        margin: 0 10px 0 20px;
+                    }
+                }
+            }
+        }
+    }
+}

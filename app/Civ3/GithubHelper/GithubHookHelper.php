@@ -38,7 +38,7 @@ class GithubHookHelper
         $tr = "$hostWorkdir \"$publicKey\" \"$privateKey\" {$repoName} ".
               "{$cloneUrl}";
 
-        Logger($tr);
+//        Logger($tr);
 
         $clone = shell_exec($tr . ' && exit');
         Storage::append($saveFileLogsPath, $clone);

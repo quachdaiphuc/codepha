@@ -1,0 +1,15 @@
+.EmptyPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    .resize {
+        width: 250px;
+        fill: #ccc;
+        color: #ccc;
+        font-size: 43px;
+        text-align: center;
+        font-weight: bold;
+        opacity: 0.5;
+    }
+}
